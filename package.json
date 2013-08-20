@@ -1,0 +1,20 @@
+{
+  "name": "fetool",
+  "main": "index.html",
+  "description": "Reverse proxy GUI",
+  "keywords": [
+    "Reverse-proxy",
+    "GUI"
+  ],
+  "window": {
+    "icon": "icon.png",
+    "toolbar": true,
+    "width": 800,
+    "height": 600,
+    "position": "center"
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "version" : "0.1.0"
+}

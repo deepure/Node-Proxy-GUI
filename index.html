@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Proxy GUI -- FEDTools</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/toggle-switch.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- <body ng-controller="PhoneListCtrl"> -->
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">FEDtools</a>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="index.html"><span class="glyphicon glyphicon-random"></span> Proxy</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="page" role="main">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active">Proxy GUI</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="panel proxy-panel" ng-controller="ProxyListCtrl">
+				<!-- Default panel contents -->
+				<div class="panel-heading">
+					<div class="edit-host" ng-click="open()">
+						<span class="glyphicon glyphicon-folder-open"></span> 编辑HOSTS文件
+					</div>
+					<h1>Proxy Settings</h1>
+				</div>
+				<div class="panel-body">
+					<p class="tips">请确保80端口未被占用,如80端口冲突导致程序报错请重启本程序</p>
+					<div class="row proxy-list" ng-repeat="route in routes" >
+						<div class="col-xs-4">
+							<input type="text" class="form-control origin-domain" placeholder="域名" value="{{route.origin}}" ng-model="route.origin">
+						</div>
+						<div class="icons">
+							<span class="glyphicon glyphicon-random"></span>
+						</div>
+						<div class="col-xs-4">
+							<input type="text" class="form-control proxy-domain"  placeholder="要代理域名" value="{{route.target}}" ng-model="route.target">
+						</div>
+						<div class="col-xs-2">
+							<input type="text" class="form-control proxy-port" placeholder="port" value="{{route.port}}" ng-model="route.port">
+						</div>
+						<div class="icons" ng-click="addProxy()">
+							<span class="glyphicon glyphicon-plus"></span>
+						</div>
+					</div>
+<!-- 					<p>{{routes | json}}</p> -->
+					<label class="checkbox toggle candy proxy-action">
+						<input id="view" type="checkbox" ng-model="pState"  ng-click="switch()" />
+						<p>
+							<span>On</span>
+							<span>Off</span>
+						</p>
+						
+						<a class="slide-button"></a>
+					</label>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<p>Thanks Bootstrap · ❤ · Node-Webkit · <a href="mailto:zhangmingxing@made-in-china.com">Feedback</a></p>
+	</footer>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="components/angular/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="http://img.vemic.com/fetool/update.js"></script>
+</body>
+</html>

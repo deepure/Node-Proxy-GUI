@@ -1,0 +1,95 @@
+body {
+	background: #1a1a1a;
+}
+.navbar-inverse {
+	background-color: #E85C41;
+	border:none;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a {
+	background: #333;
+}
+.page {
+	padding: 70px 30px 110px;
+	background: #2c2c2c;
+	min-height: 600px;
+}
+.glyphicon {
+	vertical-align: middle;
+	-webkit-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.proxy-panel .panel-heading h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+.proxy-panel .panel-heading .edit-host {
+	margin-top: 5px;
+	float: right;
+	font-size: 12px;
+	cursor: pointer;
+}
+.proxy-panel .panel-heading .glyphicon {
+	font-size: 12px;
+	vertical-align: top;
+	margin-right: 5px;
+}
+.proxy-panel .panel-heading .glyphicon-ok-sign {
+	color: #690;
+}
+.proxy-panel .panel-heading .glyphicon-ban-circle {
+	color: #ccc;
+}
+.panel-body .tips {
+	margin: 10px 10px 20px;
+	border: 2px dashed #eee;
+	padding: 10px;
+	border-radius: 5px;
+	color: #f60;
+}
+.proxy-list {
+	padding: 0 20px;
+	margin-bottom: 10px;
+}
+.proxy-list .col-xs-1 {
+	padding: 0 2px;
+}
+.proxy-list .icons {
+	cursor: pointer;
+	float: left;
+	width: 20px;
+	margin-left: 15px;
+	padding-top: 8px;
+}
+.proxy-action {
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 400px;
+	height: 40px;
+	padding: 5px 0;
+	cursor: pointer;
+}
+.proxy-action .slide-button {
+	background: #E85C41;
+	box-shadow: none;
+}
+.footer {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	color: #333;
+	border-top: 1px solid #000;
+	background: #1a1a1a;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.footer a {
+	color: #455F11;
+}
