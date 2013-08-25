@@ -93,28 +93,3 @@ function ProxyListCtrl($scope) {
 
 	}
 }
-
-// 弹出提示
-var msgTip = function(msg){
-	var updateBox = '<div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">Update</h4></div><div class="modal-body">'+ msg +'</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
-	$('body').append(updateBox);
-	$('#update').modal('show');
-};
-
-// 升级提示
-var updateMsg = function(version,link){
-	var downLoad = '<a href="' +link+ '">有新版本' + version + ' 点击下载</a>';
-	return downLoad;
-};
-
-// 版本检查
-var  latestVersion = {
-	"version"	: 	"0.2.0",
-	"link"		: 	"http://img.vemic.com/fetool/proxy.zip"
-};
-fs.readFile('./package.json',function(err,data){
-	var currentVersion = JSON.parse(data).version;
-	if (currentVersion != latestVersion.version) {
-		msgTip(updateMsg(latestVersion.version , latestVersion.link));
-	}
-});
